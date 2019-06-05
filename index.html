@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container start" style="margin-right:70px ">
+		<img src="door.png" class="w-25 door1" style="margin-top: 100px;">
+		<img src="door2.png" class="w-25 door2" style="margin-top: 100px; height: 400px">
+		<img src="door3.png" class="w-25 door3" style="margin-top: 100px; height: 400px">
+	</div>
+	<div class="harryPotter" style="background-image: url(bg.jpg); height: 900px; background-size: 100% 100%; display: none">
+
+		<h1 class="text-light">Помоги Гарри найти его метлу, плащ и палочку!Надо заработать 3 очка! </h1>
+		<h1  class="text-light point">0</h1>
+		<button class="qwerty">Выйти из игры</button>
+		<img src="gun.png" style="height: 50px;position: absolute; margin-left: 260px; margin-top:610px" class="fdsa1">
+		<img src="mantiya.png" style="height: 50px;position: absolute; margin-left: 800px; margin-top:610px" class="asdf1">
+		<img src="metla.png" style="width: 100px; height: 100px;position: absolute; margin-left: 1100px; margin-top:590px" class="asdf2">
+		<img src="palochka.png" style=" width: 100px; height: 100px;position: absolute; margin-left: 1100px; margin-top:300px" class="asdf3">
+		<img src="ring.png" style="width: 20px; height: 20px;position: absolute; margin-left: 1000px; margin-top:250px" class="fdsa2">
+	</div>
+
+	<div class="homer" style="background-image: url(bg2.jpg); height: 700px; background-size: 100% 100%; display: none">
+
+		<h1 class="text-light">Найди 3 отличий!</h1>
+		<h1  class="text-light point1">0</h1>
+		<button>Выйти из игры</button>
+
+		<img src="apple.png" style="height: 50px; width: 70px; position: absolute; margin-left:300px; margin-top: 50px" class="as1">
+		<img src="flower.png" style="height: 30px; width: 30px; position: absolute; margin-left:1066px; margin-top: 442px" class="as2">
+		<img src="кольцо.png"  style="height: 30px; width: 30px; position: absolute; margin-left:1130px; margin-top: 275px" class="as3">
+	</div>
+
+	<script type="text/javascript">
+		let ochki=0
+		document.querySelector(".door1").onclick = function(){
+			alert("Добро пожаловать в Хогвартс!")
+			document.querySelector(".start").style.display="none"
+			document.querySelector(".harryPotter").style.display="block"
+			document.querySelector(".asdf1").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point').innerHTML=ochki
+				document.querySelector('.asdf1').style.display="none"
+			}
+			document.querySelector(".asdf2").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point').innerHTML=ochki
+				document.querySelector('.asdf2').style.display="none"
+			}
+			document.querySelector(".asdf3").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point').innerHTML=ochki
+				document.querySelector('.asdf3').style.display="none"
+			}
+			document.querySelector(".fdsa1").onclick=function(){
+				alert("Попробуй еще раз!")
+			}
+			document.querySelector(".fdsa2").onclick=function(){
+				alert("Попробуй еще раз!")
+			}
+			document.querySelector('.qwerty').onclick=function(){
+				document.querySelector(".start").style.display="block"
+			document.querySelector(".harryPotter").style.display="none"
+			}
+		}
+
+		document.querySelector(".door2").onclick = function(){
+			alert("The Simcons!")
+			document.querySelector(".start").style.display="none"
+			document.querySelector(".homer").style.display="block"
+			document.querySelector(".as1").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point1').innerHTML=ochki
+				document.querySelector('.as1').style.display="none"
+			}
+			document.querySelector(".as2").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point1').innerHTML=ochki
+				document.querySelector('.as2').style.display="none"
+			}
+			document.querySelector(".as3").onclick=function(){
+				ochki=ochki+1
+				document.querySelector('.point1').innerHTML=ochki
+				document.querySelector('.as3').style.display="none"
+			}
+		}
+	</script>
+</body>
+</html>
